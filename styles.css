@@ -226,16 +226,17 @@ nav ul li a:hover {
 }
 
 .screenshot-carousel {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 50px;
+    justify-items: center;
 }
 
 .screenshot-item {
     text-align: center;
     max-width: 280px;
+    width: 100%;
 }
 
 .screenshot-item img {
@@ -244,6 +245,8 @@ nav ul li a:hover {
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s, box-shadow 0.3s;
+    object-fit: cover;
+    aspect-ratio: 9/16; /* Keeping a consistent aspect ratio */
 }
 
 .screenshot-item img:hover {
@@ -427,7 +430,6 @@ footer a:hover {
     }
     
     .screenshot-carousel {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
 }
