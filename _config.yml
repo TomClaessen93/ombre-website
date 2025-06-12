@@ -1,0 +1,8 @@
+# Required plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Basic site settings
+title: Tombre - Ear Training
+description: Train your musical ear with customizable scales, chords & intervals.
